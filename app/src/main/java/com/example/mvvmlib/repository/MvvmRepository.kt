@@ -1,6 +1,7 @@
 package com.example.mvvmlib.repository
 
-import com.example.mvvmlib.view_model.SingleLiveEvent
+import com.example.mvvm_lib.repository.BaseRepository
+import com.example.mvvm_lib.view_model.SingleLiveEvent
 
 class MvvmRepository : BaseRepository() {
     fun getMessage(message: SingleLiveEvent<String?>) {

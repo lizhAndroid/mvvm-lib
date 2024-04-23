@@ -2,6 +2,7 @@ package com.example.mvvmlib.view
 
 import android.os.Bundle
 import android.util.Log
+import com.example.mvvm_lib.view.BaseActivity
 import com.example.mvvmlib.R
 import com.example.mvvmlib.databinding.ActivityMvvmBinding
 import com.example.mvvmlib.view_model.MVVMViewModel

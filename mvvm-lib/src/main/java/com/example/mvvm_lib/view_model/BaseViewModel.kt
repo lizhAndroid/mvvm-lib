@@ -1,7 +1,7 @@
-package com.example.mvvmlib.view_model
+package com.example.mvvm_lib.view_model
 
 import androidx.lifecycle.ViewModel
-import com.example.mvvmlib.repository.BaseRepository
+import com.example.mvvm_lib.repository.BaseRepository
 import java.lang.reflect.ParameterizedType
 
 open class BaseViewModel<RP : BaseRepository?> : ViewModel() {

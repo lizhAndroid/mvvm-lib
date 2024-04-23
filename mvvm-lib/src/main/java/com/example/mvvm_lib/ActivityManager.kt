@@ -1,4 +1,4 @@
-package com.example.mvvmlib
+package com.example.mvvm_lib
 
 import android.app.Activity
 import java.util.*

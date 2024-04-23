@@ -13,12 +13,12 @@
         android:orientation="vertical">
 
 
-        <com.example.mvvmlib.utils.StatusBar
+        <com.example.mvvm_lib.utils.StatusBar
             android:id="@+id/st_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.example.mvvmlib.utils.TitleBar
+        <com.example.mvvm_lib.utils.TitleBar
             android:id="@+id/title_bar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
