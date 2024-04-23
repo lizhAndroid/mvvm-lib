@@ -1,10 +1,10 @@
-package com.example.mvvmlib.utils
+package com.example.mvvm_lib.utils
 
 import android.content.Context
 import android.os.Build
 import android.util.AttributeSet
 import android.view.View
-import com.example.mvvmlib.R
+import com.example.mvvm_lib.R
 
 class StatusBar : View {
     private var mStatusBarHeight = 0

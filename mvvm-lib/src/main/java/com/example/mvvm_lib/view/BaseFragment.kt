@@ -17,9 +17,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.mvvmlib.ActivityManager
-import com.example.mvvmlib.R
-import com.example.mvvmlib.view_model.BaseViewModel
+import com.example.mvvm_lib.ActivityManager
+import com.example.mvvm_lib.R
+import com.example.mvvm_lib.view_model.BaseViewModel
 import com.lxj.xpopup.XPopup
 import com.lxj.xpopup.impl.LoadingPopupView
 import java.lang.reflect.ParameterizedType
@@ -79,7 +79,7 @@ abstract class BaseFragment<VB : ViewDataBinding?, VM : BaseViewModel<*>> : Frag
      */
     protected fun goActivityThenFinish(clazz: Class<*>?) {
         startActivity(Intent(mContext, clazz))
-        requireActivity().finish()
+        activity?.finish()
     }
 
     /**
@@ -125,14 +125,14 @@ abstract class BaseFragment<VB : ViewDataBinding?, VM : BaseViewModel<*>> : Frag
      * @return
      */
     protected val isNightModel: Boolean
-        protected get() {
+        get() {
             val uiModeManager =
                 mContext!!.getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
             return uiModeManager.nightMode == UiModeManager.MODE_NIGHT_YES
         }
 
     protected fun showFragment(position: Int, id: Int = R.id.fl_container) {
-        if (mFragmentList.size == 0) return
+        if (mFragmentList.isEmpty()) return
         val fragment = mFragmentList[position] ?: return
         if (mCurrentFragment != null) {
             childFragmentManager.beginTransaction().hide(mCurrentFragment!!)

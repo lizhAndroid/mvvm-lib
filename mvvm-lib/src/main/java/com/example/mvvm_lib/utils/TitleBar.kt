@@ -1,4 +1,4 @@
-package com.example.mvvmlib.utils
+package com.example.mvvm_lib.utils
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.databinding.DataBindingUtil
-import com.example.mvvmlib.ActivityManager
-import com.example.mvvmlib.R
-import com.example.mvvmlib.databinding.TitleBarBinding
+import com.example.mvvm_lib.ActivityManager
+import com.example.mvvm_lib.R
+import com.example.mvvm_lib.databinding.TitleBarBinding
 
 class TitleBar : RelativeLayout, View.OnClickListener {
     private var onLeftClickListener: OnLeftClickListener? = null

@@ -1,5 +1,4 @@
-package com.example.mvvmlib.view
-
+package com.example.mvvm_lib.view
 import android.app.Activity
 import android.app.UiModeManager
 import android.content.Context
@@ -18,16 +17,16 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.mvvmlib.ActivityManager
-import com.example.mvvmlib.R
-import com.example.mvvmlib.databinding.ActivityBaseTitleBinding
-import com.example.mvvmlib.utils.TitleBar.OnLeftClickListener
-import com.example.mvvmlib.utils.TitleBar.OnRightClickListener
-import com.example.mvvmlib.view_model.BaseViewModel
+import com.example.mvvm_lib.ActivityManager
+import com.example.mvvm_lib.R
+import com.example.mvvm_lib.utils.TitleBar
+import com.example.mvvm_lib.view_model.BaseViewModel
+
 import com.lxj.xpopup.XPopup
 import com.lxj.xpopup.impl.LoadingPopupView
 import java.lang.reflect.ParameterizedType
 import java.util.*
+import com.example.mvvm_lib.databinding.ActivityBaseTitleBinding
 
 abstract class BaseActivity<VB : ViewDataBinding?, VM : BaseViewModel<*>> : AppCompatActivity() {
     private var mLoadingPopupView: LoadingPopupView? = null
@@ -171,7 +170,7 @@ abstract class BaseActivity<VB : ViewDataBinding?, VM : BaseViewModel<*>> : AppC
         leftStr: String?,
         leftTextColor: Int,
         leftImg: Int,
-        onLeftClickListener: OnLeftClickListener?
+        onLeftClickListener: TitleBar.OnLeftClickListener?
     ) {
         mBaseDataBinding!!.includeTitle.titleBar.setLeftVisible(true).setLeftImage(leftImg)
             .setLeftText(leftStr).setLeftTextColor(leftTextColor)
@@ -186,7 +185,7 @@ abstract class BaseActivity<VB : ViewDataBinding?, VM : BaseViewModel<*>> : AppC
         rightStr: String?,
         rightTextColor: Int,
         rightImg: Int,
-        onRightClickListener: OnRightClickListener?
+        onRightClickListener: TitleBar.OnRightClickListener?
     ) {
         mBaseDataBinding!!.includeTitle.titleBar.setOnRightClickListener(onRightClickListener)
             .setRightText(rightStr)
